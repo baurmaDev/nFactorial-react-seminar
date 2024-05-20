@@ -1,16 +1,16 @@
 import { mockData } from "../../mockData";
 import UserCard from "../UserCard.jsx/UserCard";
-
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const UserCards = () => {
     return (
         <div>
             {
                 mockData.map(userData => (
-                    <div>{userData.name}</div>
+                    <UserCard userInfo={userData} />
                 ))
             }
-            <UserCard />
         </div>
     )
 }
